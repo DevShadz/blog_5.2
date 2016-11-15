@@ -26,10 +26,14 @@
                         <td >  
                         <div = style="float: right;">
                           {!! Form::open (array ('route'=>['task.destroy', $task->id], 'method' => 'DELETE')) !!}
-                          
+
+                         {{ link_to_route('task.show', 'Show', [$task->id], ['class'=>'btn btn-info']) }}
+
+                        |
+
                         {{ link_to_route('task.edit', 'Edit', [$task->id], ['class'=>'btn btn-primary']) }}
+                        
                          | 
-                      
 
                         {!! Form::button('Delete',['class'=>'btn btn-danger','type'=>'submit']) !!}
 
